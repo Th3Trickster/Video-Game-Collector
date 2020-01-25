@@ -1,0 +1,14 @@
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\bin\Debug\VideoGameCollector.exe.config
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\bin\Debug\VideoGameCollector.exe
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\bin\Debug\VideoGameCollector.pdb
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\VideoGameCollector.csprojAssemblyReference.cache
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\MainWindow.g.cs
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\App.g.cs
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\VideoGameCollector_MarkupCompile.cache
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\VideoGameCollector_MarkupCompile.lref
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\MainWindow.baml
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\VideoGameCollector.g.resources
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\VideoGameCollector.Properties.Resources.resources
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\VideoGameCollector.csproj.GenerateResource.cache
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\VideoGameCollector.exe
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\VideoGameCollector.pdb
