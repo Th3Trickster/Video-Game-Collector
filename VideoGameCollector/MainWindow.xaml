@@ -55,58 +55,145 @@
                     Width="250"
                     Margin="0 30 0 0"
                     Height="50"
-                    Style="{StaticResource MaterialDesignFlatButton}">
-                <StackPanel Orientation="Horizontal">
-                    <Image/>
-                    <TextBlock Text="Dashboard"/>
-                </StackPanel>
+                    Style="{StaticResource MaterialDesignFlatButton}"
+                    IsDefault="True">
+                <Grid HorizontalAlignment="Left"
+                      Width="200">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="125"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="Assets/view-dashboard.png"
+                           Width="30"
+                           Height="30"
+                           HorizontalAlignment="Left"/>
+                    <TextBlock Text="Dashboard"
+                               Grid.Column="1"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Left"
+                               Margin="21 0 0 0"/>
+                </Grid>
             </Button>
-            <!--<Button Content="Dashboard"
-                    Grid.Row="1"
+
+            <!-- Games Button -->
+            <Button Grid.Row="2"
                     Width="250"
                     Margin="0 30 0 0"
                     Height="50"
-                    Style="{StaticResource MaterialDesignFlatButton}"/>-->
+                    Style="{StaticResource MaterialDesignFlatButton}">
+                <Grid HorizontalAlignment="Left"
+                      Width="200">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="125"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="Assets/disc.png"
+                           Width="30"
+                           Height="30"
+                           HorizontalAlignment="Left"/>
+                    <TextBlock Text="Games"
+                               Grid.Column="1"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Left"
+                               Margin="21 0 0 0"/>
+                </Grid>
+            </Button>
 
-            <!-- Games Button -->
-            <Button Content="Games"
-                    Grid.Row="2"
-                    Width="250"
-                    Margin="0 15 0 0"
-                    Height="50"
-                    Style="{StaticResource MaterialDesignFlatButton}"/>
-            
             <!-- Consoles Button -->
-            <Button Content="Consoles"
-                    Grid.Row="3"
+            <Button Grid.Row="3"
                     Width="250"
-                    Margin="0 15 0 0"
+                    Margin="0 30 0 0"
                     Height="50"
-                    Style="{StaticResource MaterialDesignFlatButton}"/>
+                    Style="{StaticResource MaterialDesignFlatButton}">
+                <Grid HorizontalAlignment="Left"
+                      Width="200">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="125"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="Assets/xbox.png"
+                           Width="30"
+                           Height="30"
+                           HorizontalAlignment="Left"/>
+                    <TextBlock Text="Consoles"
+                               Grid.Column="1"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Left"
+                               Margin="21 0 0 0"/>
+                </Grid>
+            </Button>
             
             <!-- Peripherals Button -->
-            <Button Content="Peripherals"
-                    Grid.Row="4"
+            <Button Grid.Row="4"
                     Width="250"
-                    Margin="0 15 0 0"
+                    Margin="0 30 0 0"
                     Height="50"
-                    Style="{StaticResource MaterialDesignFlatButton}"/>
+                    Style="{StaticResource MaterialDesignFlatButton}">
+                <Grid HorizontalAlignment="Left"
+                      Width="200">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="125"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="Assets/gamepad-square.png"
+                           Width="30"
+                           Height="30"
+                           HorizontalAlignment="Left"/>
+                    <TextBlock Text="Peripherals"
+                               Grid.Column="1"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Left"
+                               Margin="21 0 0 0"/>
+                </Grid>
+            </Button>
 
             <!-- Export Button -->
-            <Button Content="Export"
-                    Grid.Row="5"
+            <Button Grid.Row="5"
                     Width="250"
-                    Margin="0 15 0 0"
+                    Margin="0 30 0 0"
                     Height="50"
-                    Style="{StaticResource MaterialDesignFlatButton}"/>
+                    Style="{StaticResource MaterialDesignFlatButton}">
+                <Grid HorizontalAlignment="Left"
+                      Width="200">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="125"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="Assets/Export.png"
+                           Width="30"
+                           Height="30"
+                           HorizontalAlignment="Left"/>
+                    <TextBlock Text="Export"
+                               Grid.Column="1"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Left"
+                               Margin="21 0 0 0"/>
+                </Grid>
+            </Button>
             
             <!-- Settings Button -->
-            <Button Content="Settings"
-                    Grid.Row="6"
+            <Button Grid.Row="6"
                     Width="250"
-                    Margin="0 15 0 0"
+                    Margin="0 30 0 0"
                     Height="50"
-                    Style="{StaticResource MaterialDesignFlatButton}"/>
+                    Style="{StaticResource MaterialDesignFlatButton}">
+                <Grid HorizontalAlignment="Left"
+                      Width="200">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="125"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="Assets/settings.png"
+                           Width="30"
+                           Height="30"
+                           HorizontalAlignment="Left"/>
+                    <TextBlock Text="Settings"
+                               Grid.Column="1"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Left"
+                               Margin="21 0 0 0"/>
+                </Grid>
+            </Button>
         </Grid>
     </Grid>
 </Window>

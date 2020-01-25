@@ -6,7 +6,6 @@ C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\bin\Debug\MaterialD
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\bin\Debug\MaterialDesignColors.pdb
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\bin\Debug\MaterialDesignThemes.Wpf.xml
-C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\VideoGameCollector.Views.csprojAssemblyReference.cache
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\MainWindow.g.cs
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\App.g.cs
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\VideoGameCollector_MarkupCompile.cache
@@ -19,3 +18,4 @@ C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\VideoGame
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\VideoGameCollector.Views.csproj.CopyComplete
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\VideoGameCollector.exe
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\VideoGameCollector.pdb
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\VideoGameCollector.Views.csprojAssemblyReference.cache
