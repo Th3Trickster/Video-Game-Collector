@@ -32,6 +32,17 @@ namespace VideoGameCollector.User_Controls
             set { SetValue(ButtonTextProperty, value); }
         }
 
+        public bool IsButtonDefault
+        {
+            get { return (bool)GetValue(IsButtonDefaultProperty); }
+            set { SetValue(IsButtonDefaultProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for IsButtonDefault.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty IsButtonDefaultProperty =
+            DependencyProperty.Register("IsButtonDefault", typeof(bool), typeof(MainWindowNavigationButton));
+
+
         public static readonly DependencyProperty ImagePathProperty =
             DependencyProperty.Register("ImagePath", typeof(string), typeof(MainWindowNavigationButton), new PropertyMetadata("No Image path provided. No image will be shown."));
 

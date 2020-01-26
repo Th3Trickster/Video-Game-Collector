@@ -11,7 +11,8 @@
         <Button Width="250"
                 Height="50"
                 Style="{StaticResource MaterialDesignFlatButton}"
-                Margin="0 15 0 0">
+                Margin="0 15 0 0"
+                IsDefault="{Binding IsButtonDefault, ElementName=NavigationButton}">
             <Grid Width="200">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>

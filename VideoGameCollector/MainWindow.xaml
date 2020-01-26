@@ -55,12 +55,11 @@
             I used Dependency Properties in the Code Behind of MainWindowNavigationButton.xaml which is found in the 
             User Control folder. -->
             
-            <!-- Next step is to add a default button option to the User Control -->
-            
             <!-- Dashboard Button -->
             <uc:MainWindowNavigationButton Grid.Row="1"
                                            ImagePath="/Assets/view-dashboard.png"
-                                           ButtonText="Dashboard"/>
+                                           ButtonText="Dashboard"
+                                           IsButtonDefault="True"/>
 
             <!-- Games Button -->
             <uc:MainWindowNavigationButton Grid.Row="2"
