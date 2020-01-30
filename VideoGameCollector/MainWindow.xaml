@@ -5,7 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VideoGameCollector"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        xmlns:uc="clr-namespace:VideoGameCollector.User_Controls"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
@@ -18,7 +17,8 @@
         
         <!-- Grid for holding all left side panel contents.
              Added to first column of the default grid. -->
-        <Grid Grid.Column="0">
+        <Grid Grid.Column="0"
+              x:Name="LeftNavBar">
             <Grid.RowDefinitions>
                 <!-- Username Row #0 -->
                 <RowDefinition Height="Auto"/>
@@ -51,40 +51,162 @@
                   HorizontalAlignment="Center"
                   VerticalAlignment="Bottom"/>
 
-            <!-- Made a User Control that allows adding an ImagePath for the leading icon and a text for the button. 
+            <!-- Made a User Control that allows adding an ImagePath for the leading icon, text for the button and able to set it as default. 
             I used Dependency Properties in the Code Behind of MainWindowNavigationButton.xaml which is found in the 
             User Control folder. -->
             
             <!-- Dashboard Button -->
-            <uc:MainWindowNavigationButton Grid.Row="1"
+            <Button Grid.Row="1"
+                    Width="250"
+                    Height="50"
+                    Margin="0 15 0 0"
+                    x:Name="DashboardButton"
+                    Style="{StaticResource MaterialDesignFlatButton}"
+                    IsDefault="True"
+                    Click="ChangeCurrentSelectedButton">
+                <StackPanel Orientation="Horizontal"
+                            Width="200">
+                    <Image Source="Assets/view-dashboard.png"
+                           VerticalAlignment="Center"
+                           Width="30"
+                           Height="30"
+                           Margin="0 0 21 0"/>
+                    <TextBlock Text="Dashboard"
+                               VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+
+            <Button Grid.Row="2"
+                    Width="250"
+                    Height="50"
+                    Margin="0 15 0 0"
+                    x:Name="GamesButton"
+                    Style="{StaticResource MaterialDesignFlatButton}"
+                    Click="ChangeCurrentSelectedButton">
+                <StackPanel Orientation="Horizontal"
+                            Width="200">
+                    <Image Source="Assets/disc.png"
+                           VerticalAlignment="Center"
+                           Width="30"
+                           Height="30"
+                           Margin="0 0 21 0"/>
+                    <TextBlock Text="Games"
+                               VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button Grid.Row="3"
+                    Width="250"
+                    Height="50"
+                    Margin="0 15 0 0"
+                    x:Name="ConsolesButton"
+                    Style="{StaticResource MaterialDesignFlatButton}"
+                    Click="ChangeCurrentSelectedButton">
+                <StackPanel Orientation="Horizontal"
+                            Width="200">
+                    <Image Source="Assets/xbox.png"
+                           VerticalAlignment="Center"
+                           Width="30"
+                           Height="30"
+                           Margin="0 0 21 0"/>
+                    <TextBlock Text="Console"
+                               VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button Grid.Row="4"
+                    Width="250"
+                    Height="50"
+                    Margin="0 15 0 0"
+                    x:Name="PeripheralsButton"
+                    Style="{StaticResource MaterialDesignFlatButton}"
+                    Click="ChangeCurrentSelectedButton">
+                <StackPanel Orientation="Horizontal"
+                            Width="200">
+                    <Image Source="Assets/gamepad-square.png"
+                           VerticalAlignment="Center"
+                           Width="30"
+                           Height="30"
+                           Margin="0 0 21 0"/>
+                    <TextBlock Text="Peripherals"
+                               VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button Grid.Row="5"
+                    Width="250"
+                    Height="50"
+                    x:Name="ExportButton"
+                    Margin="0 15 0 0"
+                    Style="{StaticResource MaterialDesignFlatButton}"
+                    Click="ChangeCurrentSelectedButton">
+                <StackPanel Orientation="Horizontal"
+                            Width="200">
+                    <Image Source="Assets/Export.png"
+                           VerticalAlignment="Center"
+                           Width="30"
+                           Height="30"
+                           Margin="0 0 21 0"/>
+                    <TextBlock Text="Export"
+                               VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button Grid.Row="6"
+                    Width="250"
+                    Height="50"
+                    x:Name="SettingsButton"
+                    Margin="0 15 0 0"
+                    Style="{StaticResource MaterialDesignFlatButton}"
+                    Click="ChangeCurrentSelectedButton">
+                <StackPanel Orientation="Horizontal"
+                            Width="200">
+                    <Image Source="Assets/settings.png"
+                           VerticalAlignment="Center"
+                           Width="30"
+                           Height="30"
+                           Margin="0 0 21 0"/>
+                    <TextBlock Text="Settings"
+                               VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <!--<uc:MainWindowNavigationButton Grid.Row="1"
                                            ImagePath="/Assets/view-dashboard.png"
                                            ButtonText="Dashboard"
-                                           IsButtonDefault="True"/>
+                                           IsButtonDefault="True"
+                                           x:Name="DashboardButton"/>-->
 
-            <!-- Games Button -->
+            <!-- Games Button --><!--
             <uc:MainWindowNavigationButton Grid.Row="2"
                                            ImagePath="/Assets/disc.png"
-                                           ButtonText="Games"/>
+                                           ButtonText="Games"
+                                           x:Name="GamesButton"/>
 
-            <!-- Consoles Button -->
+            --><!-- Consoles Button --><!--
             <uc:MainWindowNavigationButton Grid.Row="3"
                                            ImagePath="/Assets/xbox.png"
-                                           ButtonText="Consoles"/>
+                                           ButtonText="Consoles"
+                                           x:Name="ConsolesButton"/>
 
-            <!-- Peripherals Button -->
+            --><!-- Peripherals Button --><!--
             <uc:MainWindowNavigationButton Grid.Row="4"
                                            ImagePath="/Assets/gamepad-square.png"
-                                           ButtonText="Peripherals"/>
+                                           ButtonText="Peripherals"
+                                           x:Name="PeripheralsButton"/>
 
-            <!-- Export Button -->
+            --><!-- Export Button --><!--
             <uc:MainWindowNavigationButton Grid.Row="5"
                                            ImagePath="/Assets/Export.png"
-                                           ButtonText="Export"/>
+                                           ButtonText="Export"
+                                           x:Name="ExportButton"/>
 
-            <!-- Settings Button -->
+            --><!-- Settings Button --><!--
             <uc:MainWindowNavigationButton Grid.Row="6"
                                            ImagePath="/Assets/settings.png"
-                                           ButtonText="Settings"/>
+                                           ButtonText="Settings"
+                                           x:Name="SettingsButton"/>-->
         </Grid>
     </Grid>
 </Window>
