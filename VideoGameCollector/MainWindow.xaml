@@ -8,17 +8,25 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
+        ResizeMode="NoResize"
         Title="Dashboard" Height="720" Width="1280">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="280"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         
         <!-- Grid for holding all left side panel contents.
              Added to first column of the default grid. -->
-        <Grid Grid.Column="0"
-              x:Name="LeftNavBar">
+        <Border BorderBrush="Black"
+                BorderThickness="0 0 0 0"
+                Background="White">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30"
+                                  Opacity="0.5"/>
+            </Border.Effect>
+            <Grid Grid.Column="0"
+                  x:Name="LeftNavBar">
             <Grid.RowDefinitions>
                 <!-- Username Row #0 -->
                 <RowDefinition Height="Auto"/>
@@ -37,13 +45,13 @@
             </Grid.RowDefinitions>
             
             <!-- Username Label -->
-            <Label Content="Username Placeholder"
+                <Label Content="Username Placeholder"
                    FontSize="20"
                    HorizontalAlignment="Center"
                    Margin="0 20 0 0"
                    Padding="0 0 0 30"/>
-            
-            <!-- Line below Username -->
+
+                <!-- Line below Username -->
             <Line Stroke="Gray"
                   Opacity="0.5"
                   X1="250"
@@ -208,5 +216,6 @@
                                            ButtonText="Settings"
                                            x:Name="SettingsButton"/>-->
         </Grid>
+        </Border>
     </Grid>
 </Window>
