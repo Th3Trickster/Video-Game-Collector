@@ -15,7 +15,11 @@
             <ColumnDefinition Width="280"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
-        
+
+        <Frame Source="UserControls/DashboardView.xaml"
+               Grid.Column="1"
+               Width="Auto"/>
+
         <!-- Grid for holding all left side panel contents.
              Added to first column of the default grid. -->
         <Border BorderBrush="Black"
@@ -52,18 +56,14 @@
                    Padding="0 0 0 30"/>
 
                 <!-- Line below Username -->
-            <Line Stroke="Gray"
+                <Line Stroke="Gray"
                   Opacity="0.5"
                   X1="250"
                   StrokeThickness="1"
                   HorizontalAlignment="Center"
                   VerticalAlignment="Bottom"/>
 
-            <!-- Made a User Control that allows adding an ImagePath for the leading icon, text for the button and able to set it as default. 
-            I used Dependency Properties in the Code Behind of MainWindowNavigationButton.xaml which is found in the 
-            User Control folder. -->
-            
-            <!-- Dashboard Button -->
+                <!-- Dashboard Button -->
             <Button Grid.Row="1"
                     Width="250"
                     Height="50"
@@ -161,61 +161,25 @@
                 </StackPanel>
             </Button>
 
-            <Button Grid.Row="6"
+                <Button Grid.Row="6"
                     Width="250"
                     Height="50"
                     x:Name="SettingsButton"
                     Margin="0 15 0 0"
                     Style="{StaticResource MaterialDesignFlatButton}"
                     Click="ChangeCurrentSelectedButton">
-                <StackPanel Orientation="Horizontal"
+                    <StackPanel Orientation="Horizontal"
                             Width="200">
-                    <Image Source="Assets/settings.png"
+                        <Image Source="Assets/settings.png"
                            VerticalAlignment="Center"
                            Width="30"
                            Height="30"
                            Margin="0 0 21 0"/>
-                    <TextBlock Text="Settings"
+                        <TextBlock Text="Settings"
                                VerticalAlignment="Center"/>
-                </StackPanel>
-            </Button>
-
-            <!--<uc:MainWindowNavigationButton Grid.Row="1"
-                                           ImagePath="/Assets/view-dashboard.png"
-                                           ButtonText="Dashboard"
-                                           IsButtonDefault="True"
-                                           x:Name="DashboardButton"/>-->
-
-            <!-- Games Button --><!--
-            <uc:MainWindowNavigationButton Grid.Row="2"
-                                           ImagePath="/Assets/disc.png"
-                                           ButtonText="Games"
-                                           x:Name="GamesButton"/>
-
-            --><!-- Consoles Button --><!--
-            <uc:MainWindowNavigationButton Grid.Row="3"
-                                           ImagePath="/Assets/xbox.png"
-                                           ButtonText="Consoles"
-                                           x:Name="ConsolesButton"/>
-
-            --><!-- Peripherals Button --><!--
-            <uc:MainWindowNavigationButton Grid.Row="4"
-                                           ImagePath="/Assets/gamepad-square.png"
-                                           ButtonText="Peripherals"
-                                           x:Name="PeripheralsButton"/>
-
-            --><!-- Export Button --><!--
-            <uc:MainWindowNavigationButton Grid.Row="5"
-                                           ImagePath="/Assets/Export.png"
-                                           ButtonText="Export"
-                                           x:Name="ExportButton"/>
-
-            --><!-- Settings Button --><!--
-            <uc:MainWindowNavigationButton Grid.Row="6"
-                                           ImagePath="/Assets/settings.png"
-                                           ButtonText="Settings"
-                                           x:Name="SettingsButton"/>-->
-        </Grid>
+                    </StackPanel>
+                </Button>
+            </Grid>
         </Border>
     </Grid>
 </Window>
