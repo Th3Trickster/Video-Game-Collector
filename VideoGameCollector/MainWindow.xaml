@@ -16,9 +16,10 @@
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
 
-        <Frame Source="UserControls/DashboardView.xaml"
+        <Frame Source="UserControls/GamesView.xaml"
                Grid.Column="1"
-               Width="Auto"/>
+               Width="980"
+               HorizontalAlignment="Center"/>
 
         <!-- Grid for holding all left side panel contents.
              Added to first column of the default grid. -->

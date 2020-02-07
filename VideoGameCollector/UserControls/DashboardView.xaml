@@ -10,16 +10,74 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <local:Card Margin="30 20 0 0"
+        <local:Card Margin="60 40 0 0"
                     CardImage="/Assets/currency-usd.png"
                     CardHeader="Total Collection Value"
                     CardDescription="$1,000"
                     CardFooter="Check Your Most Valuable Items"
                     CardButtonIcon="ArrowRight"
+                    CardLeadingTextIcon="/Assets/eye.png"
+                    CardImageBackground="#56af5a"/>
+
+        <local:Card Margin="30 40 0 0"
+                    Grid.Column="1"
+                    CardImage="/Assets/nes-cartridge.png"
+                    CardImageBackground="#eb4945"
+                    CardHeader="Number Of Games Owned"
+                    CardDescription="500"
+                    CardFooter="Check Your Most Valuable Games"
+                    CardButtonIcon="ArrowRight"
                     CardLeadingTextIcon="/Assets/eye.png"/>
+
+        <local:Card Margin="60 40 0 0"
+                    Grid.Row="1"
+                    CardImage="/Assets/nes-console.png"
+                    CardImageBackground="#19bdd1"
+                    CardHeader="Number Of Consoles Owned"
+                    CardDescription="10"
+                    CardFooter="Check Your Most Valuable Consoles"
+                    CardButtonIcon="ArrowRight"
+                    CardLeadingTextIcon="/Assets/eye.png"/>
+
+        <local:Card Margin="30 40 0 0"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    CardImage="/Assets/n64-controller.png"
+                    CardImageBackground="#fd9a13"
+                    CardHeader="Number Of Peripherals Owned"
+                    CardDescription="15"
+                    CardFooter="Check Your Most Valuable Peripherals"
+                    CardButtonIcon="ArrowRight"
+                    CardLeadingTextIcon="/Assets/eye.png"/>
+
+        <Label Content="Recently Added Items"
+               Grid.Row="2"
+               Grid.ColumnSpan="2"
+               HorizontalAlignment="Center"
+               FontSize="16"/>
+
+        <ListView Grid.Row="3"
+                  Grid.ColumnSpan="2"
+                  HorizontalAlignment="Center"
+                  Width="500"
+                  Height="200">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="#"/>
+                    <GridViewColumn Header="Item"/>
+                    <GridViewColumn Header="Paid"/>
+                    <GridViewColumn Header="Value"/>
+                    <GridViewColumn Header="Category"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </UserControl>

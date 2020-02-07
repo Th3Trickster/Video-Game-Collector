@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoGameCollector.Views", "VideoGameCollector.Views.csproj", "{5245BD8B-2D2B-4638-834F-BF0833065A10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoGameCollector.ViewModels", "..\VideoGameCollector.ViewModels\VideoGameCollector.ViewModels.csproj", "{DB92354C-3183-467A-A755-8E4D15369395}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoGameCollector.ViewModels", "..\VideoGameCollector.ViewModels\VideoGameCollector.ViewModels.csproj", "{DB92354C-3183-467A-A755-8E4D15369395}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoGameCollector.Models", "..\VideoGameCollector.Models\VideoGameCollector.Models.csproj", "{A5743CA1-2CC7-4946-8808-C6D47E4DF211}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoGameCollector.Models", "..\VideoGameCollector.Models\VideoGameCollector.Models.csproj", "{A5743CA1-2CC7-4946-8808-C6D47E4DF211}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoGameCollector.Models.Business", "..\VideoGameCollector.Models.Business\VideoGameCollector.Models.Business.csproj", "{82B5AC9F-71A5-495A-B275-838EBFD826F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{A5743CA1-2CC7-4946-8808-C6D47E4DF211}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5743CA1-2CC7-4946-8808-C6D47E4DF211}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5743CA1-2CC7-4946-8808-C6D47E4DF211}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82B5AC9F-71A5-495A-B275-838EBFD826F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82B5AC9F-71A5-495A-B275-838EBFD826F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82B5AC9F-71A5-495A-B275-838EBFD826F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82B5AC9F-71A5-495A-B275-838EBFD826F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

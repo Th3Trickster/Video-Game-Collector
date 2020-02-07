@@ -56,6 +56,12 @@ namespace VideoGameCollector.UserControls
             set { SetValue(CardButtonIconProperty, value); }
         }
 
+        public string CardImageBackground
+        {
+            get { return (string)GetValue(CardImageBackgroundProperty); }
+            set { SetValue(CardImageBackgroundProperty, value); }
+        }
+
         public Card()
         {
             InitializeComponent();
@@ -78,5 +84,8 @@ namespace VideoGameCollector.UserControls
 
         public static readonly DependencyProperty CardButtonIconProperty =
             DependencyProperty.Register("CardButtonIcon", typeof(string), typeof(Card));
+
+        public static readonly DependencyProperty CardImageBackgroundProperty =
+            DependencyProperty.Register("CardImageBackground", typeof(string), typeof(Card));
     }
 }

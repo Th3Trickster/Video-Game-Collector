@@ -84,7 +84,7 @@
 
         <Border BorderThickness="1"
                 CornerRadius="3 3 3 3"
-                Background="#56af5a"
+                Background="{Binding CardImageBackground, ElementName=Cards}"
                 Width="86"
                 Height="86"
                 HorizontalAlignment="Center"

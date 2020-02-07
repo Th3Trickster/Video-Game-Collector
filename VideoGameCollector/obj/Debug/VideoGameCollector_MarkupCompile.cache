@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\App.xaml
-339236893
+51898818666
 
-7-400443748
+81365399727
 15-2053197932
-MainWindow.xaml;UserControls\Card.xaml;UserControls\DashboardView.xaml;
+MainWindow.xaml;ResoureDictionaries\ListBoxWithImageStyle.xaml;UserControls\Card.xaml;UserControls\DashboardView.xaml;UserControls\GamesView.xaml;
 
 False
 
