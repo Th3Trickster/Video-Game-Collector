@@ -63,6 +63,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BrowseGamesView.xaml.cs">
+      <DependentUpon>BrowseGamesView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Card.xaml.cs">
       <DependentUpon>Card.xaml</DependentUpon>
     </Compile>
@@ -72,6 +75,10 @@
     <Compile Include="UserControls\GamesView.xaml.cs">
       <DependentUpon>GamesView.xaml</DependentUpon>
     </Compile>
+    <Page Include="BrowseGamesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

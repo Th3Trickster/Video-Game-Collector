@@ -1,0 +1,89 @@
+﻿<Window x:Class="VideoGameCollector.BrowseGamesView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VideoGameCollector"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Title="BrowseGamesView" Height="720" Width="400">
+    <Window.Resources>
+        <ResourceDictionary Source="/ResoureDictionaries/ListBoxWithImageStyle.xaml"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <!-- Textbox for search Row #0 -->
+            <RowDefinition Height="Auto"/>
+            <!-- Filter, All Platforms Row #1-->
+            <RowDefinition Height="Auto"/>
+            <!-- Ordered By Label Row #2-->
+            <RowDefinition Height="Auto"/>
+            <!-- Games Shown Label Row #3 -->
+            <RowDefinition Height="Auto"/>
+            <!-- Listbox of games Row #4-->
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBox Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
+                 Width="350"
+                 Margin="0 20 0 0"
+                 VerticalScrollBarVisibility="Disabled"
+                 materialDesign:HintAssist.Hint="Search"
+                 HorizontalAlignment="Center"/>
+
+        <!-- Grid for Filter, All Platforms -->
+        <Grid Grid.Row="1"
+              Margin="0 10 0 0"
+              HorizontalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Filter Button -->
+            <Button Style="{StaticResource MaterialDesignFlatButton}"
+                    Grid.Column="0"
+                    HorizontalAlignment="Right"
+                    Margin="0 0 0 0">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Assets/filter-variant.png"
+                           VerticalAlignment="Center"
+                           Margin="0 0 5 0"/>
+                    <TextBlock Text="Filter"
+                               VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <!-- All Platforms Label -->
+            <Label Content="All Platforms"
+                   Grid.Column="1"
+                   VerticalAlignment="Center"
+                   HorizontalContentAlignment="Center"
+                   FontWeight="Bold"/>
+        </Grid>
+        
+        <!-- Label for Ordered By -->
+        <Label Content="Ordered by Title"
+               Grid.Row="2"
+               HorizontalAlignment="Center"
+               FontWeight="Bold"/>
+        
+        <!-- Label for Games Shown -->
+        <Label Content="Games Shown: 1000"
+               Grid.Row="3"
+               HorizontalAlignment="Center"/>
+        
+        <!-- Listbox for Games -->
+        <ListBox Grid.Row="4"
+                 x:Name="List"
+                 HorizontalAlignment="Center"
+                 Width="390"
+                 Height="500"
+                 Margin="0 30 0 0"
+                 Style="{DynamicResource listBoxStyleWithImage}"
+                 ItemContainerStyle="{StaticResource ListBoxItemItemStyle}"/>
+    </Grid>
+</Window>
