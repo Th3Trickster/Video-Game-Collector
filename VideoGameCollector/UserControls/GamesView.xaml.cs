@@ -23,15 +23,6 @@ namespace VideoGameCollector.UserControls
         public GamesView()
         {
             InitializeComponent();
-            List.Items.Add("Test");
-            List.Items.Add("Test");
-            List.Items.Add("Test");
-            List.Items.Add("Test");
-            List.Items.Add("Test");
-            List.Items.Add("Test");
-            List.Items.Add("Test");
-            List.Items.Add("Test");
-            List.Items.Add("Test");
         }
     }
 }

@@ -1,0 +1,15 @@
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Commands\bin\Debug\netstandard2.0\VideoGameCollector.Commands.deps.json
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Commands\bin\Debug\netstandard2.0\VideoGameCollector.Commands.dll
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Commands\bin\Debug\netstandard2.0\VideoGameCollector.Commands.pdb
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Commands\bin\Debug\netstandard2.0\VideoGameCollector.Helpers.dll
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Commands\bin\Debug\netstandard2.0\VideoGameCollector.Models.dll
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Commands\bin\Debug\netstandard2.0\VideoGameCollector.ViewModels.dll
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Commands\bin\Debug\netstandard2.0\VideoGameCollector.ViewModels.pdb
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Commands\bin\Debug\netstandard2.0\VideoGameCollector.Helpers.pdb
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Commands\bin\Debug\netstandard2.0\VideoGameCollector.Models.pdb
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Commands\obj\Debug\netstandard2.0\VideoGameCollector.Commands.csprojAssemblyReference.cache
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Commands\obj\Debug\netstandard2.0\VideoGameCollector.Commands.AssemblyInfoInputs.cache
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Commands\obj\Debug\netstandard2.0\VideoGameCollector.Commands.AssemblyInfo.cs
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Commands\obj\Debug\netstandard2.0\VideoGameCollector.Commands.csproj.CopyComplete
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Commands\obj\Debug\netstandard2.0\VideoGameCollector.Commands.dll
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Commands\obj\Debug\netstandard2.0\VideoGameCollector.Commands.pdb

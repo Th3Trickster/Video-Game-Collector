@@ -4,16 +4,23 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VideoGameCollector"
+        xmlns:vm="clr-namespace:VideoGameCollector.ViewModels;assembly=VideoGameCollector.ViewModels"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:usercontrols="clr-namespace:VideoGameCollector.UserControls"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         ResizeMode="NoResize"
         Title="BrowseGamesView" Height="720" Width="400">
     <Window.Resources>
-        <ResourceDictionary Source="/ResoureDictionaries/ListBoxWithImageStyle.xaml"/>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/ResoureDictionaries/ListBoxWithImageStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <vm:BrowseGamesViewModel x:Key="vm"/>
+        </ResourceDictionary>
     </Window.Resources>
-    <Grid>
+    <Grid DataContext="{StaticResource vm}">
         <Grid.RowDefinitions>
             <!-- Textbox for search Row #0 -->
             <RowDefinition Height="Auto"/>
@@ -24,6 +31,8 @@
             <!-- Games Shown Label Row #3 -->
             <RowDefinition Height="Auto"/>
             <!-- Listbox of games Row #4-->
+            <RowDefinition Height="Auto"/>
+            <!-- Search Button Row #5 -->
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
@@ -74,16 +83,30 @@
         <!-- Label for Games Shown -->
         <Label Content="Games Shown: 1000"
                Grid.Row="3"
-               HorizontalAlignment="Center"/>
+               HorizontalAlignment="Left"
+               Margin="10 0 0 0"/>
         
         <!-- Listbox for Games -->
-        <ListBox Grid.Row="4"
-                 x:Name="List"
-                 HorizontalAlignment="Center"
+        <ListBox ItemsSource="{Binding Games}"
                  Width="390"
                  Height="500"
-                 Margin="0 30 0 0"
-                 Style="{DynamicResource listBoxStyleWithImage}"
-                 ItemContainerStyle="{StaticResource ListBoxItemItemStyle}"/>
+                 Grid.Row="4">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <TextBlock Text="{Binding name}"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <!-- Search Button -->
+        <Button Grid.Row="5"
+                HorizontalAlignment="Center"
+                Margin="0 8 0 0"
+                Width="100"
+                Height="30"
+                Content="Search"
+                Command="{Binding SearchGamesCommand}"/>
     </Grid>
 </Window>

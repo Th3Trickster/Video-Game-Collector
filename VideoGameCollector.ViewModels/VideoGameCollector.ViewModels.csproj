@@ -4,4 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\VideoGameCollector.Helpers\VideoGameCollector.Helpers.csproj" />
+    <ProjectReference Include="..\VideoGameCollector.Models\VideoGameCollector.Models.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,8 +1,13 @@
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.ViewModels\bin\Debug\netstandard2.0\VideoGameCollector.ViewModels.deps.json
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.ViewModels\bin\Debug\netstandard2.0\VideoGameCollector.ViewModels.dll
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.ViewModels\bin\Debug\netstandard2.0\VideoGameCollector.ViewModels.pdb
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.ViewModels\bin\Debug\netstandard2.0\VideoGameCollector.Helpers.dll
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.ViewModels\bin\Debug\netstandard2.0\VideoGameCollector.Models.dll
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.ViewModels\bin\Debug\netstandard2.0\VideoGameCollector.Helpers.pdb
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.ViewModels\bin\Debug\netstandard2.0\VideoGameCollector.Models.pdb
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.ViewModels\obj\Debug\netstandard2.0\VideoGameCollector.ViewModels.csprojAssemblyReference.cache
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.ViewModels\obj\Debug\netstandard2.0\VideoGameCollector.ViewModels.AssemblyInfoInputs.cache
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.ViewModels\obj\Debug\netstandard2.0\VideoGameCollector.ViewModels.AssemblyInfo.cs
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.ViewModels\obj\Debug\netstandard2.0\VideoGameCollector.ViewModels.csproj.CopyComplete
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.ViewModels\obj\Debug\netstandard2.0\VideoGameCollector.ViewModels.dll
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.ViewModels\obj\Debug\netstandard2.0\VideoGameCollector.ViewModels.pdb
