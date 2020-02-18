@@ -1,8 +1,8 @@
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Models.Business\bin\Debug\netstandard2.0\VideoGameCollector.Models.Business.deps.json
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Models.Business\bin\Debug\netstandard2.0\VideoGameCollector.Models.Business.dll
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Models.Business\bin\Debug\netstandard2.0\VideoGameCollector.Models.Business.pdb
-C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Models.Business\obj\Debug\netstandard2.0\VideoGameCollector.Models.Business.csprojAssemblyReference.cache
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Models.Business\obj\Debug\netstandard2.0\VideoGameCollector.Models.Business.AssemblyInfoInputs.cache
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Models.Business\obj\Debug\netstandard2.0\VideoGameCollector.Models.Business.AssemblyInfo.cs
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Models.Business\obj\Debug\netstandard2.0\VideoGameCollector.Models.Business.dll
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Models.Business\obj\Debug\netstandard2.0\VideoGameCollector.Models.Business.pdb
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Models.Business\obj\Debug\netstandard2.0\VideoGameCollector.Models.Business.csprojAssemblyReference.cache

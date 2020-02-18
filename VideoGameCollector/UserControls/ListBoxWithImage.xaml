@@ -8,6 +8,30 @@
              Background="White"
              d:DesignHeight="500" d:DesignWidth="600">
     <Grid>
+        <ListBox ItemsSource="{Binding ItemsSource}"
+                 Width="390"
+                 Height="500">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <TextBlock Text="Test"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <!--<ListBox ItemsSource="{Binding Games}"
+                 Width="390"
+                 Height="500"
+                 Grid.Row="4">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <TextBlock Text="{Binding name}"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>-->
+        
         <ListBox>
             <Grid Margin="0">
                 <Grid.ColumnDefinitions>
@@ -27,11 +51,11 @@
                        Height="40"
                        Width="40"/>
                 </Border>
-                <TextBlock Text="{Binding Path=HeaderText}"
+                <TextBlock Text="{Binding HeaderText}"
                        FontWeight="Bold"
                        Grid.Column="1"
                        Grid.Row="0"/>
-                <TextBlock Text="Test 2"
+                <TextBlock Text="{Binding DeveloperName}"
                        Grid.Column="1"
                        Grid.Row="1"/>
             </Grid>

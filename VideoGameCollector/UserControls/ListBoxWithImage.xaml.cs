@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,8 +27,35 @@ namespace VideoGameCollector.UserControls
             set { SetValue(HeaderTextProperty, value); }
         }
 
+        public string DeveloperName
+        {
+            get { return (string)GetValue(DeveloperNameProperty); }
+            set { SetValue(DeveloperNameProperty, value); }
+        }
+
+        public string CoverArt
+        {
+            get { return (string)GetValue(CoverArtProperty); }
+            set { SetValue(CoverArtProperty, value); }
+        }
+
+        public IEnumerable ItemsSource
+        {
+            get { return (IEnumerable)GetValue(ItemsSourceProperty); }
+            set { SetValue(ItemsSourceProperty, value); }
+        }
+
+        public static readonly DependencyProperty ItemsSourceProperty =
+            DependencyProperty.Register("ItemsSource", typeof(IEnumerable), typeof(ListBoxWithImage));
+
+        public static readonly DependencyProperty CoverArtProperty =
+            DependencyProperty.Register("CovertArt", typeof(string), typeof(ListBoxWithImage));
+
+        public static readonly DependencyProperty DeveloperNameProperty =
+            DependencyProperty.Register("DeveloperName", typeof(string), typeof(ListBoxWithImage));
+
         public static readonly DependencyProperty HeaderTextProperty =
-            DependencyProperty.Register("HeaderText", typeof(string), typeof(ListBoxWithImage), new PropertyMetadata(0));
+            DependencyProperty.Register("HeaderText", typeof(string), typeof(ListBoxWithImage));
 
         public ListBoxWithImage()
         {

@@ -69,6 +69,7 @@
     <Compile Include="BrowseGamesView.xaml.cs">
       <DependentUpon>BrowseGamesView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Todo.cs" />
     <Compile Include="UserControls\Card.xaml.cs">
       <DependentUpon>Card.xaml</DependentUpon>
     </Compile>
@@ -189,6 +190,10 @@
     <Resource Include="Assets\chevron-up.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\VideoGameCollector.Converters\VideoGameCollector.Converters.csproj">
+      <Project>{1443c79a-c49f-4a7d-8abc-1e7d4c800188}</Project>
+      <Name>VideoGameCollector.Converters</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VideoGameCollector.ViewModels\VideoGameCollector.ViewModels.csproj">
       <Project>{db92354c-3183-467a-a755-8e4d15369395}</Project>
       <Name>VideoGameCollector.ViewModels</Name>

@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoGameCollector.Models.B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoGameCollector.Helpers", "..\VideoGameCollector.Helpers\VideoGameCollector.Helpers.csproj", "{78349825-9DF5-4524-92BF-E7D40EEDD06E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoGameCollector.Converters", "..\VideoGameCollector.Converters\VideoGameCollector.Converters.csproj", "{1443C79A-C49F-4A7D-8ABC-1E7D4C800188}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{78349825-9DF5-4524-92BF-E7D40EEDD06E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78349825-9DF5-4524-92BF-E7D40EEDD06E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78349825-9DF5-4524-92BF-E7D40EEDD06E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1443C79A-C49F-4A7D-8ABC-1E7D4C800188}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1443C79A-C49F-4A7D-8ABC-1E7D4C800188}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1443C79A-C49F-4A7D-8ABC-1E7D4C800188}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1443C79A-C49F-4A7D-8ABC-1E7D4C800188}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

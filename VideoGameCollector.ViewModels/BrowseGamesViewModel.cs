@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
+using System.Linq;
 using System.Text;
 using VideoGameCollector.Helpers;
 using VideoGameCollector.Models;
@@ -13,6 +15,7 @@ namespace VideoGameCollector.ViewModels
     {
         private string query;
         private string selectedGame;
+        private int gamesCount;
 
         public string Query
         {
@@ -35,6 +38,15 @@ namespace VideoGameCollector.ViewModels
         }
 
         public ObservableCollection<Game> Games { get; set; }
+        public int GamesCount
+        {
+            get { return gamesCount; }
+            set
+            {
+                gamesCount = value;
+                OnPropertyChanged("GamesCount");
+            }
+        }
         public SearchGamesCommand SearchGamesCommand { get; set; }
 
         public BrowseGamesViewModel()
@@ -48,10 +60,13 @@ namespace VideoGameCollector.ViewModels
             var games = await IGDBHelper.GetGames(Query);
 
             Games.Clear();
-            foreach(var game in games)
+            foreach (var game in games)
             {
                 Games.Add(game);
             }
+
+            // For the Games Shown label.
+            GamesCount = Games.Count;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

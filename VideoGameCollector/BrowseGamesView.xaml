@@ -7,9 +7,11 @@
         xmlns:vm="clr-namespace:VideoGameCollector.ViewModels;assembly=VideoGameCollector.ViewModels"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:usercontrols="clr-namespace:VideoGameCollector.UserControls"
+        xmlns:coverters="clr-namespace:VideoGameCollector.Converters;assembly=VideoGameCollector.Converters"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
+        Name="BrowseGames"
         ResizeMode="NoResize"
         Title="BrowseGamesView" Height="720" Width="400">
     <Window.Resources>
@@ -18,6 +20,7 @@
                 <ResourceDictionary Source="/ResoureDictionaries/ListBoxWithImageStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
             <vm:BrowseGamesViewModel x:Key="vm"/>
+            <coverters:StringToImageConverter x:Key="stringToImage"/>
         </ResourceDictionary>
     </Window.Resources>
     <Grid DataContext="{StaticResource vm}">
@@ -41,7 +44,8 @@
                  Margin="0 20 0 0"
                  VerticalScrollBarVisibility="Disabled"
                  materialDesign:HintAssist.Hint="Search"
-                 HorizontalAlignment="Center"/>
+                 HorizontalAlignment="Center"
+                 Text="{Binding Query, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
         <!-- Grid for Filter, All Platforms -->
         <Grid Grid.Row="1"
@@ -81,11 +85,12 @@
                FontWeight="Bold"/>
         
         <!-- Label for Games Shown -->
-        <Label Content="Games Shown: 1000"
+        <Label Content="{Binding GamesCount}"
                Grid.Row="3"
                HorizontalAlignment="Left"
                Margin="10 0 0 0"/>
-        
+        <!-- Content="Games Shown: 1000" -->
+
         <!-- Listbox for Games -->
         <ListBox ItemsSource="{Binding Games}"
                  Width="390"
@@ -94,7 +99,38 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
-                        <TextBlock Text="{Binding name}"/>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Border Grid.Column="0"
+                                Grid.Row="0"
+                                Grid.RowSpan="2"
+                                Margin="0 0 10 0">
+                            <!-- Used a converter to convert the image url to proper uri.
+                            Api would return //imagename.jpg, which was not a proper uri.-->
+                            <Image Source="{Binding cover.image_id, Converter={StaticResource stringToImage}}"
+                                   Stretch="Fill"
+                                   Height="70"
+                                   Width="60"/>
+                        </Border>
+                        <TextBlock Text="{Binding name}"
+                                   FontWeight="Bold"
+                                   Grid.Column="1"
+                                   Grid.Row="0"/>
+                        <ListView Grid.Column="1"
+                                  Grid.Row="1"
+                                  ItemsSource="{Binding DeveloperCompanies}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding company.name}"/>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>

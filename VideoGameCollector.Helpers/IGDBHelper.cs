@@ -12,25 +12,23 @@ namespace VideoGameCollector.Helpers
     public class IGDBHelper
     {
         public const string BASE_URL = "https://api-v3.igdb.com/";
+        public const string BASE_URL_GAMES = BASE_URL + "games";
         public const string API_KEY = "95831edec05ae71ce835a513d2bafcc5";
         public const string GAME_ENDPOINT_SEARCH = "https://api-v3.igdb.com/games?search={0}";
-        public const string COVER_ID_URL = "//images.igdb.com/igdb/image/upload/t_thumb/{0}.jpg"; // May need to remove
 
         public static async Task<List<Game>> GetGames(string query)
         {
             List<Game> games = new List<Game>();
 
-            string myJson = "search \"halo\"; fields name;";
+            string myJson = "search \"{0}\"; fields name, cover.url, cover.image_id, involved_companies.developer, involved_companies.company.name; limit 500;";
 
             using (HttpClient client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Add("user-key", "95831edec05ae71ce835a513d2bafcc5");
 
-                var response = await client.PostAsync("https://api-v3.igdb.com/games", new StringContent(myJson, Encoding.UTF8, "application/json"));
+                var response = await client.PostAsync(BASE_URL_GAMES, new StringContent(string.Format(myJson, query), Encoding.UTF8, "application/json"));
 
                 var responseString = await response.Content.ReadAsStringAsync();
-
-                Debug.Print(responseString);
 
                 games = JsonConvert.DeserializeObject<List<Game>>(responseString);
             }
