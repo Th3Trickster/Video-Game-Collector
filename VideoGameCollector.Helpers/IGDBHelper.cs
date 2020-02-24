@@ -18,9 +18,11 @@ namespace VideoGameCollector.Helpers
 
         public static async Task<List<Game>> GetGames(string query)
         {
+            // To show the initial release date, use a converter and then figure out the earliest date of release
+            // by using some kind of equation.
             List<Game> games = new List<Game>();
 
-            string myJson = "search \"{0}\"; fields name, cover.url, cover.image_id, involved_companies.developer, involved_companies.company.name; limit 500;";
+            string myJson = "search \"{0}\"; fields name, cover.url, cover.image_id, involved_companies.developer, involved_companies.company.name, aggregated_rating, first_release_date, genres.name, platforms.name; limit 500;";
 
             using (HttpClient client = new HttpClient())
             {

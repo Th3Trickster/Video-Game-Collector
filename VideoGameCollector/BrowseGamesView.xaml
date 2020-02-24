@@ -13,14 +13,19 @@
         WindowStyle="None"
         Name="BrowseGames"
         ResizeMode="NoResize"
-        Title="BrowseGamesView" Height="720" Width="400">
+        Title="BrowseGamesView" Height="720" Width="480">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/ResoureDictionaries/ListBoxWithImageStyle.xaml"/>
+                <!-- Styling for the main listbox item. -->
+                <ResourceDictionary Source="/ResourceDictionaries/ListBoxItemCardStyle.xaml"/>
+                <!-- Styling for the Developers and Genres inner listbox. -->
+                <ResourceDictionary Source="/ResourceDictionaries/ListBoxDeveloperGenresStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
             <vm:BrowseGamesViewModel x:Key="vm"/>
             <coverters:StringToImageConverter x:Key="stringToImage"/>
+            <coverters:NullRatingConverter x:Key="nullRatingConverter"/>
+            <coverters:UnixTimestampToDateTimeConverter x:Key="unixTimestampToDateTimeConverter"/>
         </ResourceDictionary>
     </Window.Resources>
     <Grid DataContext="{StaticResource vm}">
@@ -77,23 +82,32 @@
                    HorizontalContentAlignment="Center"
                    FontWeight="Bold"/>
         </Grid>
-        
+
         <!-- Label for Ordered By -->
         <Label Content="Ordered by Title"
                Grid.Row="2"
                HorizontalAlignment="Center"
                FontWeight="Bold"/>
-        
+
         <!-- Label for Games Shown -->
-        <Label Content="{Binding GamesCount}"
-               Grid.Row="3"
-               HorizontalAlignment="Left"
-               Margin="10 0 0 0"/>
+        <Grid Grid.Row="3"
+              Margin="5 0 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Games Shown:"/>
+            <Label Content="{Binding GamesCount}"
+                   Grid.Column="1"
+                   HorizontalAlignment="Left"
+                   Margin="0 0 3 0"/>
+        </Grid>
         <!-- Content="Games Shown: 1000" -->
 
         <!-- Listbox for Games -->
         <ListBox ItemsSource="{Binding Games}"
-                 Width="390"
+                 ItemContainerStyle="{DynamicResource ListBoxItemStyle1}"
+                 Width="480"
                  Height="500"
                  Grid.Row="4">
             <ListBox.ItemTemplate>
@@ -103,34 +117,80 @@
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
-                        <Border Grid.Column="0"
-                                Grid.Row="0"
-                                Grid.RowSpan="2"
-                                Margin="0 0 10 0">
-                            <!-- Used a converter to convert the image url to proper uri.
-                            Api would return //imagename.jpg, which was not a proper uri.-->
-                            <Image Source="{Binding cover.image_id, Converter={StaticResource stringToImage}}"
-                                   Stretch="Fill"
-                                   Height="70"
-                                   Width="60"/>
-                        </Border>
-                        <TextBlock Text="{Binding name}"
-                                   FontWeight="Bold"
-                                   Grid.Column="1"
-                                   Grid.Row="0"/>
-                        <ListView Grid.Column="1"
-                                  Grid.Row="1"
-                                  ItemsSource="{Binding DeveloperCompanies}">
-                            <ListView.ItemTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding company.name}"/>
-                                </DataTemplate>
-                            </ListView.ItemTemplate>
-                        </ListView>
+                        <Image Source="{Binding cover.image_id, Converter={StaticResource stringToImage}}"
+                               Stretch="Fill"
+                               Width="100"
+                               Height="130"/>
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="310"/>
+                                    <ColumnDefinition Width="30"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{Binding name}"
+                                           Foreground="White"
+                                           FontWeight="Bold"
+                                           FontSize="16"
+                                           Margin="15 2 0 0"
+                                           TextWrapping="Wrap"/>
+
+                                <TextBlock Text="{Binding aggregated_rating, StringFormat={}{0:F0}, Converter={StaticResource nullRatingConverter}}"
+                                           Grid.Column="1"
+                                           Foreground="{Binding AggregatedRatingColor}"
+                                           FontWeight="Bold"
+                                           FontSize="16"
+                                           HorizontalAlignment="Center"/>
+                            </Grid>
+
+                            <ItemsControl Grid.Row="1"
+                                          ItemsSource="{Binding DeveloperCompanies}"
+                                          Margin="15 2 0 0">
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <WrapPanel IsItemsHost="True"/>
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock x:Name="commaTextBlock" 
+                                                       Text=", "
+                                                       Foreground="White"/>
+                                            <TextBlock Text="{Binding company.name}"
+                                                       Foreground="White"
+                                                       TextWrapping="Wrap"/>
+                                        </StackPanel>
+                                        <DataTemplate.Triggers>
+                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource PreviousData}}" Value="{x:Null}">
+                                                <Setter Property="Visibility" TargetName="commaTextBlock" Value="Collapsed"/>
+                                            </DataTrigger>
+                                        </DataTemplate.Triggers>
+                                    </DataTemplate>
+
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+
+                            <Grid Grid.Row="2"
+                                  VerticalAlignment="Bottom"
+                                  Margin="0 0 0 4">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Release Date:"
+                                           Foreground="White"
+                                           Margin="15 20 0 0"/>
+                                <TextBlock Text="{Binding first_release_date, Converter={StaticResource unixTimestampToDateTimeConverter}}"
+                                           Foreground="White"
+                                           Margin="10 20 0 0"
+                                           Grid.Column="1"/>
+                            </Grid>
+                        </Grid>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>

@@ -9,12 +9,22 @@
     ".NETStandard,Version=v2.0/": {
       "VideoGameCollector.Converters/1.0.0": {
         "dependencies": {
+          "EPP.PresentationCore": "1.0.0",
           "NETStandard.Library": "2.0.3",
           "VideoGameCollector.Helpers": "1.0.0",
-          "PresentationFramework": "4.0.0.0"
+          "PresentationFramework": "4.0.0.0",
+          "WindowsBase": "4.0.0.0"
         },
         "runtime": {
           "VideoGameCollector.Converters.dll": {}
+        }
+      },
+      "EPP.PresentationCore/1.0.0": {
+        "runtime": {
+          "lib/PresentationCore.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.30319.34211"
+          }
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
@@ -53,14 +63,6 @@
           }
         }
       },
-      "System.Xaml/4.0.0.0": {
-        "runtime": {
-          "System.Xaml.dll": {
-            "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.7.3062.0"
-          }
-        }
-      },
       "WindowsBase/4.0.0.0": {
         "runtime": {
           "WindowsBase.dll": {
@@ -69,9 +71,9 @@
           }
         }
       },
-      "PresentationCore/4.0.0.0": {
+      "System.Xaml/4.0.0.0": {
         "runtime": {
-          "PresentationCore.dll": {
+          "System.Xaml.dll": {
             "assemblyVersion": "4.0.0.0",
             "fileVersion": "4.7.3062.0"
           }
@@ -141,14 +143,6 @@
           }
         }
       },
-      "System.Windows.Input.Manipulations/4.0.0.0": {
-        "runtime": {
-          "System.Windows.Input.Manipulations.dll": {
-            "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.7.3062.0"
-          }
-        }
-      },
       "System.Windows.Forms/4.0.0.0": {
         "runtime": {
           "System.Windows.Forms.dll": {
@@ -172,6 +166,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "EPP.PresentationCore/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ttSZCunyGyOsL20FBZxM3K/7wMvWQ9vel+IidzFYdK02RIEx+EsV3Vc0Yeo8YslOp7G08unjNrtZEtWfLXJy4Q==",
+      "path": "epp.presentationcore/1.0.0",
+      "hashPath": "epp.presentationcore.1.0.0.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
@@ -209,17 +210,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Xaml/4.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
     "WindowsBase/4.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "PresentationCore/4.0.0.0": {
+    "System.Xaml/4.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
@@ -260,11 +256,6 @@
       "sha512": ""
     },
     "System.Security/4.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "System.Windows.Input.Manipulations/4.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

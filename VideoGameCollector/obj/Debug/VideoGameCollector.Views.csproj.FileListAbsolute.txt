@@ -30,7 +30,9 @@ C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\VideoGame
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\App.baml
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\BrowseGamesView.baml
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\MainWindow.baml
-C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\ResoureDictionaries\ListBoxWithImageStyle.baml
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\ResourceDictionaries\ListBoxDeveloperGenresStyle.baml
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\ResourceDictionaries\ListBoxItemCardStyle.baml
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\ResourceDictionaries\ListBoxWithImageStyle.baml
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\UserControls\Card.baml
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\UserControls\DashboardView.baml
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\UserControls\GamesView.baml

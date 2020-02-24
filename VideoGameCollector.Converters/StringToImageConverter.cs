@@ -18,7 +18,7 @@ namespace VideoGameCollector.Converters
             if (value != null)
             {
                 string imagename = value as string;
-                return new Uri(string.Format("https://images.igdb.com/igdb/image/upload/t_thumb/{0}.jpg", imagename));
+                return new Uri(string.Format("https://images.igdb.com/igdb/image/upload/t_cover_big/{0}.jpg", imagename));
             }
             return null;
         }

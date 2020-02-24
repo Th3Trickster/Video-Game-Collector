@@ -4,9 +4,8 @@ C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debu
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\PresentationFramework.dll
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\VideoGameCollector.Helpers.dll
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\VideoGameCollector.Models.dll
-C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\System.Xaml.dll
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\WindowsBase.dll
-C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\PresentationCore.dll
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\System.Xaml.dll
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\System.Configuration.dll
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\UIAutomationProvider.dll
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\UIAutomationTypes.dll
@@ -15,15 +14,13 @@ C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debu
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\Accessibility.dll
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\System.Deployment.dll
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\System.Security.dll
-C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\System.Windows.Input.Manipulations.dll
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\System.Windows.Forms.dll
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.dll
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\VideoGameCollector.Helpers.pdb
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\VideoGameCollector.Models.pdb
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\PresentationFramework.xml
-C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\System.Xaml.xml
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\WindowsBase.xml
-C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\PresentationCore.xml
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\System.Xaml.xml
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\System.Configuration.xml
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\UIAutomationProvider.xml
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\UIAutomationTypes.xml
@@ -32,7 +29,6 @@ C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debu
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\Accessibility.xml
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\System.Deployment.xml
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\System.Security.xml
-C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\System.Windows.Input.Manipulations.xml
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\System.Windows.Forms.xml
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.xml
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\obj\Debug\netstandard2.0\VideoGameCollector.Converters.csprojAssemblyReference.cache

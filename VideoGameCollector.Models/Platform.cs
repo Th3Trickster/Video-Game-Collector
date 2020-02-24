@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace VideoGameCollector.Models
+{
+    public class Platform
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+        public string PlatformImage
+        {
+            get
+            {
+                switch(name.ToLower())
+                {
+                    case "xbox":
+                        return name.ToLower() + ".png";
+
+                    default:
+                        return null;
+                }
+            }
+        }
+    }
+}
