@@ -1,7 +1,8 @@
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Models\obj\Debug\netstandard2.0\VideoGameCollector.Models.AssemblyInfoInputs.cache
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Models\obj\Debug\netstandard2.0\VideoGameCollector.Models.AssemblyInfo.cs
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Models\bin\Debug\netstandard2.0\VideoGameCollector.Models.deps.json
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Models\bin\Debug\netstandard2.0\VideoGameCollector.Models.dll
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Models\bin\Debug\netstandard2.0\VideoGameCollector.Models.pdb
-C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Models\obj\Debug\netstandard2.0\VideoGameCollector.Models.AssemblyInfoInputs.cache
-C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Models\obj\Debug\netstandard2.0\VideoGameCollector.Models.AssemblyInfo.cs
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Models\obj\Debug\netstandard2.0\VideoGameCollector.Models.csprojAssemblyReference.cache
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Models\obj\Debug\netstandard2.0\VideoGameCollector.Models.dll
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Models\obj\Debug\netstandard2.0\VideoGameCollector.Models.pdb

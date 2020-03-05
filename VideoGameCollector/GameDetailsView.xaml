@@ -1,0 +1,497 @@
+﻿<Window x:Class="VideoGameCollector.GameDetailsView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VideoGameCollector"
+        xmlns:vm="clr-namespace:VideoGameCollector.ViewModels;assembly=VideoGameCollector.ViewModels"
+        xmlns:converters="clr-namespace:VideoGameCollector.Converters;assembly=VideoGameCollector.Converters"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Title="GameDetailsView" Height="720" Width="1280">
+    <Window.Resources>
+        <converters:StringToBackgroundImageConverter x:Key="stringToBackgroundImageConverter"/>
+        <converters:StringToImageConverter x:Key="stringToImageConverter"/>
+        <converters:UnixTimestampToDateTimeConverter x:Key="unixTimestampToDateTimeConverter"/>
+        <converters:NullRatingConverter x:Key="nullRatingConverter"/>
+        <vm:GameDetalsViewModel x:Key="vm"/>
+    </Window.Resources>
+    <Window.DataContext>
+        <vm:GameDetalsViewModel/>
+    </Window.DataContext>
+    <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto">
+    <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="442"/>
+                <!-- Row for bottom details -->
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+        <!-- Top Background image -->
+            <Image Source="{Binding Game.ScreenshotBackground, Converter={StaticResource stringToBackgroundImageConverter}}"
+                   Opacity="0.4"
+                   Stretch="UniformToFill">
+                <Image.Effect>
+                    <BlurEffect Radius="5"
+                                KernelType="Box"/>
+                </Image.Effect>
+            </Image>
+
+        <!-- Cover image -->
+            <Image Source="{Binding Game.cover.image_id, Converter={StaticResource stringToImageConverter}}"
+                   Grid.Row="1"
+                   Width="264"
+                   Height="374"
+                   Margin="50 -270 0 0"
+                   HorizontalAlignment="Left"/>
+        
+        <!-- Game title label -->
+            <StackPanel Margin="335 200 0 0">
+                <Label Content="{Binding Game.name}"
+                       FontSize="40"
+                       FontWeight="Bold"
+                       Padding="0"/>
+            </StackPanel>
+        
+        <!-- Release Date label -->
+            <StackPanel Margin="335 250 0 0">
+                <Label Content="{Binding Game.first_release_date, Converter={StaticResource unixTimestampToDateTimeConverter}}"
+                       Padding="0"
+                       FontSize="30"
+                       FontWeight="Bold"/>
+            </StackPanel>
+        
+        <!-- Game Developers items control -->
+            <StackPanel Orientation="Vertical"
+                        Margin="335 290 0 0"
+                        Grid.RowSpan="2">
+                <ItemsControl ItemsSource="{Binding Game.DeveloperCompanies}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding company.name}"
+                                       TextWrapping="Wrap"
+                                       Padding="0"
+                                       FontSize="25"
+                                       FontStyle="Italic"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+        
+        <!-- Rating label -->
+            <StackPanel HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Margin="0 20 30 0">
+                <Label Content="Rating"
+               FontSize="26"
+               HorizontalAlignment="Center"/>
+                <TextBlock Text="{Binding Game.aggregated_rating, StringFormat={}{0:F0}, Converter={StaticResource nullRatingConverter}}"
+                         Foreground="{Binding Game.AggregatedRatingColor}"
+                         FontSize="22"
+                         HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <Grid Grid.Row="2"
+                  Margin="50 0 0 0">
+                <Grid.ColumnDefinitions>
+                    <!-- Column for left side Grid -->
+                    <ColumnDefinition Width="1*"/>
+                    <!-- Column for right side Grid -->
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Left side Grid -->
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <!-- About heading row #0 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Genre Row #1 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Platforms Row #2 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Summary Row #3 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Storyline Heading Row #4 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Storyline description Row #5 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Bundled In Row #6 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- DLCS Row #7 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Screenshots Row #8 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Videos Row #9 -->
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <!-- About label -->
+                    <TextBlock Text="ABOUT"
+                               FontSize="26"
+                               FontWeight="Bold">
+                        <LineBreak/>
+                        <Line Stroke="Black"
+                              X1="50"
+                              StrokeThickness="2"
+                              Margin="0 2 0 0"/>
+                    </TextBlock>
+
+                    <!-- Genre label and binding -->
+                    <StackPanel Orientation="Horizontal"
+                                Grid.Row="1"
+                                Margin="0 8 0 0">
+                        <TextBlock Text="Genres:"
+                                   FontWeight="Bold"/>
+                        <ItemsControl ItemsSource="{Binding Game.genres}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding name}"
+                                               Margin="5 0 0 0"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+
+                    <!-- Platforms label and binding -->
+                    <StackPanel Orientation="Horizontal"
+                                Grid.Row="2"
+                                Margin="0 5 0 0">
+                        <TextBlock Text="Platforms:"
+                                   FontWeight="Bold"/>
+                        <ItemsControl ItemsSource="{Binding Game.platforms}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding name}"
+                                               Margin="5 0 0 0"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+
+                    <!-- Summary Textblock and binding -->
+                    <TextBlock Text="{Binding Game.summary}"
+                               Margin="0 10 0 0"
+                               Grid.Row="3"
+                               TextWrapping="Wrap"/>
+
+                    <!-- Storyline label and binding -->
+                    <TextBlock Text="STORYLINE"
+                               FontSize="26"
+                               FontWeight="Bold"
+                               Grid.Row="4"
+                               Margin="0 20 0 0">
+                        <LineBreak/>
+                        <Line Stroke="Black"
+                              X1="50"
+                              StrokeThickness="2"
+                              Margin="0 2 0 0"/>
+                    </TextBlock>
+                    <TextBlock Text="{Binding Game.storyline}"
+                               Grid.Row="5"
+                               Margin="0 8 0 0"
+                               TextWrapping="Wrap"
+                               HorizontalAlignment="Left"/>
+
+                    <!-- Bundled in label and binding -->
+                    <TextBlock Text="BUNDLED IN"
+                               FontSize="26"
+                               FontWeight="Bold"
+                               Grid.Row="6"
+                               Margin="0 20 0 0">
+                        <LineBreak/>
+                        <Line Stroke="Black"
+                              X1="50"
+                              StrokeThickness="2"
+                              Margin="0 2 0 0"/>
+                    </TextBlock>
+
+                    <!-- DLCs label and binding -->
+                    <TextBlock Text="DLCS"
+                               FontSize="26"
+                               FontWeight="Bold"
+                               Grid.Row="7"
+                               Margin="0 20 0 0">
+                        <LineBreak/>
+                        <Line Stroke="Black"
+                              X1="50"
+                              StrokeThickness="2"
+                              Margin="0 2 0 0"/>
+                    </TextBlock>
+
+                    <!-- Screenshots label and binding -->
+                    <TextBlock Text="SCREENSHOTS"
+                               FontSize="26"
+                               FontWeight="Bold"
+                               Grid.Row="8"
+                               Margin="0 20 0 0">
+                        <LineBreak/>
+                        <Line Stroke="Black"
+                              X1="50"
+                              StrokeThickness="2"
+                              Margin="0 2 0 0"/>
+                    </TextBlock>
+
+                    <!-- Videos label and binding -->
+                    <TextBlock Text="VIDEOS"
+                               FontSize="26"
+                               FontWeight="Bold"
+                               Grid.Row="9"
+                               Margin="0 20 0 0">
+                        <LineBreak/>
+                        <Line Stroke="Black"
+                              X1="50"
+                              StrokeThickness="2"
+                              Margin="0 2 0 0"/>
+                    </TextBlock>
+                </Grid>
+
+                <!-- Grid for right side bottom -->
+                <Grid Grid.Column="1"
+                      HorizontalAlignment="Right"
+                      Margin="0 0 50 0">
+                    <Grid.RowDefinitions>
+                        <!-- Information heading row #0 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Release Dates heading row #1 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Release Dates and platforms row #2-->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Developers heading row #3 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Developers list row #4 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Publishers row #5 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Publishers list row #6 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Game Modes heading row #7 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Games Modes list row #8 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Multiplayer Modes heading row #9 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Multiplayer Modes list row #10 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Genre heading row #11 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Genre list row #12 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Themes heading row #13 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Themes list row #14 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Series heading row #15 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Series binding row #16 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Player Perspectives row #17 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Player Perspectives list row #18 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Franchises heading row #19 -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Franchises list row #20 -->
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <!-- Information label -->
+                    <TextBlock Text="INFORMATION"
+                               FontSize="26"
+                               FontWeight="Bold"
+                               Grid.Row="0">
+                        <LineBreak/>
+                        <Line Stroke="Black"
+                              X1="50"
+                              StrokeThickness="2"
+                              Margin="0 2 0 0"/>
+                    </TextBlock>
+
+                    <!-- Release Dates heading -->
+                    <TextBlock Text="Release Dates:"
+                               FontWeight="Bold"
+                               Grid.Row="1"
+                               Margin="0 10 0 0"/>
+
+                    <!-- Release Dates and platforms binding -->
+                    <StackPanel Orientation="Vertical"
+                                Grid.Row="2"
+                                Margin="0 5 0 0">
+                        <ItemsControl ItemsSource="{Binding Game.release_dates}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding date, Converter={StaticResource unixTimestampToDateTimeConverter}}"/>
+                                        <TextBlock Text="{Binding platform.name}"
+                                                   Margin="5 0 0 0"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+
+                    <!-- Developers heading -->
+                    <TextBlock Text="Developers:"
+                               FontWeight="Bold"
+                               Grid.Row="3"
+                               Margin="0 10 0 0"/>
+
+                    <!-- Developers list -->
+                    <StackPanel Orientation="Vertical"
+                                Grid.Row="4"
+                                Margin="0 5 0 0">
+                        <ItemsControl ItemsSource="{Binding Game.DeveloperCompanies}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding company.name}"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+
+                    <!-- Publishers heading -->
+                    <TextBlock Text="Publishers:"
+                               FontWeight="Bold"
+                               Grid.Row="5"
+                               Margin="0 10 0 0"/>
+
+                    <!-- Publishers list -->
+                    <StackPanel Orientation="Vertical"
+                                Grid.Row="6"
+                                Margin="0 5 0 0">
+                        <ItemsControl ItemsSource="{Binding Game.Publishers}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding company.name}"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+
+                    <!-- Game Modes heading -->
+                    <TextBlock Text="Game Modes:"
+                               FontWeight="Bold"
+                               Grid.Row="7"
+                               Margin="0 10 0 0"/>
+
+                    <!-- Game Modes List -->
+                    <StackPanel Orientation="Vertical"
+                                Grid.Row="8"
+                                Margin="0 5 0 0">
+                        <ItemsControl ItemsSource="{Binding Game.game_modes}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding name}"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+
+                    <!-- Multiplayer modes heading -->
+                    <TextBlock Text="Multiplayer Modes:"
+                               FontWeight="Bold"
+                               Grid.Row="9"
+                               Margin="0 10 0 0"/>
+
+                    <!-- Multiplayer modes list -->
+                    <StackPanel Orientation="Vertical"
+                                Grid.Row="10"
+                                Margin="0 5 0 0">
+                        <ItemsControl ItemsSource="{Binding Game.multiplayer_modes}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding campaigncoop}"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+
+                    <!-- Genre heading -->
+                    <TextBlock Text="Genre:"
+                               FontWeight="Bold"
+                               Grid.Row="11"
+                               Margin="0 10 0 0"/>
+
+                    <!-- Genre(s) list -->
+                    <StackPanel Orientation="Vertical"
+                                Grid.Row="12"
+                                Margin="0 5 0 0">
+                        <ItemsControl ItemsSource="{Binding Game.genres}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding name}"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+
+                    <!-- Themes heading -->
+                    <TextBlock Text="Themes:"
+                               FontWeight="Bold"
+                               Grid.Row="13"
+                               Margin="0 10 0 0"/>
+
+                    <!-- Theme(s) list -->
+                    <StackPanel Orientation="Vertical"
+                                Grid.Row="14"
+                                Margin="0 5 0 0">
+                        <ItemsControl ItemsSource="{Binding Game.themes}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding name}"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+
+                    <!-- Series heading -->
+                    <TextBlock Text="Series:"
+                               FontWeight="Bold"
+                               Grid.Row="15"
+                               Margin="0 10 0 0"/>
+
+                    <!-- Series binding -->
+                    <TextBlock Text="{Binding Game.collection.name}"
+                               Grid.Row="16"
+                               Margin="0 5 0 0"/>
+
+                    <!-- Player Perspectives heading -->
+                    <TextBlock Text="Player Perspectives:"
+                               FontWeight="Bold"
+                               Grid.Row="17"
+                               Margin="0 10 0 0"/>
+
+                    <!-- Player Perspective(s) list -->
+                    <StackPanel Orientation="Vertical"
+                                Grid.Row="18"
+                                Margin="0 5 0 0">
+                        <ItemsControl ItemsSource="{Binding Game.player_perspectives}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding name}"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+
+                    <!-- Franchises heading -->
+                    <TextBlock Text="Franchises:"
+                               FontWeight="Bold"
+                               Grid.Row="19"
+                               Margin="0 10 0 0"/>
+
+                    <!-- Franchise(s) list-->
+                    <StackPanel Orientation="Vertical"
+                                Grid.Row="20"
+                                Margin="0 5 0 0">
+                        <ItemsControl ItemsSource="{Binding Game.franchises}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding name}"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</Window>

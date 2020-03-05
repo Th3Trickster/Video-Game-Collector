@@ -28,6 +28,9 @@
             <coverters:UnixTimestampToDateTimeConverter x:Key="unixTimestampToDateTimeConverter"/>
         </ResourceDictionary>
     </Window.Resources>
+    <Window.DataContext>
+        <vm:BrowseGamesViewModel/>
+    </Window.DataContext>
     <Grid DataContext="{StaticResource vm}">
         <Grid.RowDefinitions>
             <!-- Textbox for search Row #0 -->
@@ -107,6 +110,7 @@
         <!-- Listbox for Games -->
         <ListBox ItemsSource="{Binding Games}"
                  ItemContainerStyle="{DynamicResource ListBoxItemStyle1}"
+                 SelectedItem="{Binding SelectedGame, UpdateSourceTrigger=PropertyChanged}"
                  Width="480"
                  Height="500"
                  Grid.Row="4">

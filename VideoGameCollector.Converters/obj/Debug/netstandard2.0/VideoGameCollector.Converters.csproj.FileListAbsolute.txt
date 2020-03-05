@@ -1,3 +1,7 @@
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\System.Windows.Forms.xml
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\obj\Debug\netstandard2.0\VideoGameCollector.Converters.csprojAssemblyReference.cache
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\obj\Debug\netstandard2.0\VideoGameCollector.Converters.AssemblyInfoInputs.cache
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\obj\Debug\netstandard2.0\VideoGameCollector.Converters.AssemblyInfo.cs
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\VideoGameCollector.Converters.deps.json
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\VideoGameCollector.Converters.dll
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\VideoGameCollector.Converters.pdb
@@ -29,11 +33,7 @@ C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debu
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\Accessibility.xml
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\System.Deployment.xml
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\System.Security.xml
-C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\System.Windows.Forms.xml
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.xml
-C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\obj\Debug\netstandard2.0\VideoGameCollector.Converters.csprojAssemblyReference.cache
-C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\obj\Debug\netstandard2.0\VideoGameCollector.Converters.AssemblyInfoInputs.cache
-C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\obj\Debug\netstandard2.0\VideoGameCollector.Converters.AssemblyInfo.cs
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\obj\Debug\netstandard2.0\VideoGameCollector.Converters.csproj.CopyComplete
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\obj\Debug\netstandard2.0\VideoGameCollector.Converters.dll
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Converters\obj\Debug\netstandard2.0\VideoGameCollector.Converters.pdb

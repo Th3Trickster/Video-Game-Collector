@@ -9,5 +9,6 @@ namespace VideoGameCollector.Models
         public int id { get; set; }
         public Company company { get; set; }
         public bool developer { get; set; }
+        public bool publisher { get; set; }
     }
 }

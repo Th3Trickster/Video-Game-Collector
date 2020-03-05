@@ -1,9 +1,10 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Messaging;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Diagnostics;
-using System.Linq;
 using System.Text;
 using VideoGameCollector.Helpers;
 using VideoGameCollector.Models;
@@ -11,12 +12,14 @@ using VideoGameCollector.ViewModels.Commands;
 
 namespace VideoGameCollector.ViewModels
 {
-    public class BrowseGamesViewModel : INotifyPropertyChanged
+    public class BrowseGamesViewModel : ViewModelBase, INotifyPropertyChanged
     {
         private string query;
-        private string selectedGame;
+        private Game selectedGame;
         private int gamesCount;
+        private Game game;
 
+        public RelayCommand ShowGameDetailsViewCommand { private set; get; }
         public string Query
         {
             get { return query; }
@@ -26,14 +29,25 @@ namespace VideoGameCollector.ViewModels
                 OnPropertyChanged("Query");
             }
         }
+        public Game Game
+        {
+            get { return game; }
+            set
+            {
+                game = value;
+                OnPropertyChanged("Game");
+            }
+        }
 
-        public string SelectedGame
+        public Game SelectedGame
         {
             get { return selectedGame; }
             set
             {
                 selectedGame = value;
                 OnPropertyChanged("SelectedGame");
+                GetGameDetails();
+                ShowGameDetailsViewCommandExecute();
             }
         }
 
@@ -53,6 +67,7 @@ namespace VideoGameCollector.ViewModels
         {
             Games = new ObservableCollection<Game>();
             SearchGamesCommand = new SearchGamesCommand(this);
+            ShowGameDetailsViewCommand = new RelayCommand(ShowGameDetailsViewCommandExecute);
         }
 
         public async void MakeQuery()
@@ -67,6 +82,18 @@ namespace VideoGameCollector.ViewModels
 
             // For the Games Shown label.
             GamesCount = Games.Count;
+        }
+
+        public void ShowGameDetailsViewCommandExecute()
+        {
+            Messenger.Default.Send(new NotificationMessage("ShowGameDetailsView"));
+        }
+
+        private async void GetGameDetails()
+        {
+            Game = await IGDBHelper.GetGameInformation(SelectedGame.id);
+            Messenger.Default.Send(Game);
+            // Clear the listbox by clearing it in the search command button
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
