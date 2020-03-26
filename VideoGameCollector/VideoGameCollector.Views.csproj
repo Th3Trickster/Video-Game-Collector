@@ -37,8 +37,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
-      <HintPath>packages\CommonServiceLocator.2.0.2\lib\net47\CommonServiceLocator.dll</HintPath>
+    <Reference Include="CommonServiceLocator, Version=2.0.5.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>packages\CommonServiceLocator.2.0.5\lib\net47\CommonServiceLocator.dll</HintPath>
     </Reference>
     <Reference Include="GalaSoft.MvvmLight, Version=5.4.1.0, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
       <HintPath>packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
@@ -55,13 +55,16 @@
     <Reference Include="MaterialDesignThemes.Wpf, Version=3.0.1.920, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\MaterialDesignThemes.3.0.1\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\System.Windows.Interactivity.WPF.2.0.20525\lib\net40\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\MvvmLightLibs.5.4.1.1\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\System.Windows.Interactivity.WPF.2.0.20525\lib\net40\System.Windows.Interactivity.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -81,13 +84,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AttachedBehaviors\IgnoreMouseWheelBehavior.cs" />
     <Compile Include="BrowseGamesView.xaml.cs">
       <DependentUpon>BrowseGamesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DlcPopupWindowView.xaml.cs">
+      <DependentUpon>DlcPopupWindowView.xaml</DependentUpon>
     </Compile>
     <Compile Include="GameDetailsView.xaml.cs">
       <DependentUpon>GameDetailsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ScreenshotPopupWindowView.xaml.cs">
+      <DependentUpon>ScreenshotPopupWindowView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Todo.cs" />
+    <Compile Include="UIHelpers\WindowOpenHelper.cs" />
     <Compile Include="UserControls\Card.xaml.cs">
       <DependentUpon>Card.xaml</DependentUpon>
     </Compile>
@@ -97,10 +108,11 @@
     <Compile Include="UserControls\GamesView.xaml.cs">
       <DependentUpon>GamesView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ListBoxWithImage.xaml.cs">
-      <DependentUpon>ListBoxWithImage.xaml</DependentUpon>
-    </Compile>
     <Page Include="BrowseGamesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DlcPopupWindowView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -128,7 +140,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ResourceDictionaries\ListBoxScreenshotStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ResourceDictionaries\ListBoxWithImageStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ScreenshotPopupWindowView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -141,10 +161,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\GamesView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserControls\ListBoxWithImage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -232,6 +248,24 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\xboxbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Android.png" />
+    <Resource Include="Assets\Epic.png" />
+    <Resource Include="Assets\Facebook.png" />
+    <Resource Include="Assets\Gog.png" />
+    <Resource Include="Assets\Instagram.png" />
+    <Resource Include="Assets\iPad.png" />
+    <Resource Include="Assets\iPhone.png" />
+    <Resource Include="Assets\Itch.png" />
+    <Resource Include="Assets\OfficialWebsite.png" />
+    <Resource Include="Assets\Reddit.png" />
+    <Resource Include="Assets\Steam.png" />
+    <Resource Include="Assets\Twitch.png" />
+    <Resource Include="Assets\Twitter.png" />
+    <Resource Include="Assets\Wikia.png" />
+    <Resource Include="Assets\Wikipedia.png" />
+    <Resource Include="Assets\Youtube.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.3.0.1\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.3.0.1\build\MaterialDesignThemes.targets')" />

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "YB/j3qkSdNHoCcyS/FSxLmflxhkYp01giGU4CuOCOe8YUeSFuQBLjJoPGNRYVS/efYHW4/SwzOJC6oGzhDsNrg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\dhowa\\Desktop\\VideoGameCollector\\VideoGameCollector.Models.Business\\VideoGameCollector.Models.Business.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dhowa\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\dhowa\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

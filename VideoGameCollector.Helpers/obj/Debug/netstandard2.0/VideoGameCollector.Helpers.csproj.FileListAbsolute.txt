@@ -1,11 +1,12 @@
-C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Helpers\obj\Debug\netstandard2.0\VideoGameCollector.Helpers.AssemblyInfoInputs.cache
-C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Helpers\obj\Debug\netstandard2.0\VideoGameCollector.Helpers.AssemblyInfo.cs
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Helpers\bin\Debug\netstandard2.0\VideoGameCollector.Helpers.deps.json
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Helpers\bin\Debug\netstandard2.0\VideoGameCollector.Helpers.dll
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Helpers\bin\Debug\netstandard2.0\VideoGameCollector.Helpers.pdb
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Helpers\bin\Debug\netstandard2.0\VideoGameCollector.Models.dll
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Helpers\bin\Debug\netstandard2.0\VideoGameCollector.Models.pdb
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Helpers\obj\Debug\netstandard2.0\VideoGameCollector.Helpers.csprojAssemblyReference.cache
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Helpers\obj\Debug\netstandard2.0\VideoGameCollector.Helpers.csproj.CoreCompileInputs.cache
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Helpers\obj\Debug\netstandard2.0\VideoGameCollector.Helpers.AssemblyInfoInputs.cache
+C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Helpers\obj\Debug\netstandard2.0\VideoGameCollector.Helpers.AssemblyInfo.cs
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Helpers\obj\Debug\netstandard2.0\VideoGameCollector.Helpers.csproj.CopyComplete
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Helpers\obj\Debug\netstandard2.0\VideoGameCollector.Helpers.dll
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector.Helpers\obj\Debug\netstandard2.0\VideoGameCollector.Helpers.pdb

@@ -1,13 +1,15 @@
 ﻿C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\obj\Debug\GeneratedInternalTypeHelper.g.i.cs
 FC:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\App.xaml;;
 FC:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\BrowseGamesView.xaml;;
+FC:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\DlcPopupWindowView.xaml;;
 FC:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\GameDetailsView.xaml;;
 FC:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\MainWindow.xaml;;
 FC:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\ResourceDictionaries\ListBoxDeveloperGenresStyle.xaml;;
 FC:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\ResourceDictionaries\ListBoxItemCardStyle.xaml;;
+FC:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\ResourceDictionaries\ListBoxScreenshotStyle.xaml;;
 FC:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\ResourceDictionaries\ListBoxWithImageStyle.xaml;;
+FC:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\ScreenshotPopupWindowView.xaml;;
 FC:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\UserControls\Card.xaml;;
 FC:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\UserControls\DashboardView.xaml;;
 FC:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\UserControls\GamesView.xaml;;
-FC:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\UserControls\ListBoxWithImage.xaml;;
 

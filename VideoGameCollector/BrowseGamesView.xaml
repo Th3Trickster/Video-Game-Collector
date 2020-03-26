@@ -10,10 +10,9 @@
         xmlns:coverters="clr-namespace:VideoGameCollector.Converters;assembly=VideoGameCollector.Converters"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        WindowStyle="None"
         Name="BrowseGames"
         ResizeMode="NoResize"
-        Title="BrowseGamesView" Height="720" Width="480">
+        Title="BrowseGamesView" Height="750" Width="480">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -105,7 +104,6 @@
                    HorizontalAlignment="Left"
                    Margin="0 0 3 0"/>
         </Grid>
-        <!-- Content="Games Shown: 1000" -->
 
         <!-- Listbox for Games -->
         <ListBox ItemsSource="{Binding Games}"

@@ -1,18 +1,8 @@
 ﻿using GalaSoft.MvvmLight.Messaging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using VideoGameCollector.ViewModels;
+using System.Windows.Navigation;
+using VideoGameCollector.UIHelpers;
 
 namespace VideoGameCollector
 {
@@ -21,9 +11,52 @@ namespace VideoGameCollector
     /// </summary>
     public partial class GameDetailsView : Window
     {
+        ScreenshotPopupWindowView view;
+        DlcPopupWindowView dlcView;
+
         public GameDetailsView()
         {
             InitializeComponent();
+            Messenger.Default.Register<NotificationMessage>(this, NotificationMessageReceived);
+            Messenger.Default.Register<NotificationMessage>(this, ShowDlcNotificationMessageReceived);
+        }
+
+        private void NotificationMessageReceived(NotificationMessage msg)
+        {
+            if (msg.Notification == "ShowScreenshotPopupWindow")
+            {
+                if (!WindowOpenHelper.IsWindowOpen<ScreenshotPopupWindowView>())
+                {
+                    view = new ScreenshotPopupWindowView();
+                    view.Show();
+                }
+                else
+                {
+                    view.Activate();
+                }
+            }
+        }
+
+        private void ShowDlcNotificationMessageReceived(NotificationMessage msg)
+        {
+            if (msg.Notification == "ShowDlcPopup")
+            {
+                if (!WindowOpenHelper.IsWindowOpen<DlcPopupWindowView>())
+                {
+                    dlcView = new DlcPopupWindowView();
+                    dlcView.Show();
+                }
+                else
+                {
+                    dlcView.Activate();
+                }
+            }
+        }
+
+        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
+            e.Handled = true;
         }
     }
 }

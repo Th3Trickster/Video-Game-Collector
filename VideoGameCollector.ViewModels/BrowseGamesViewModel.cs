@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Text;
 using VideoGameCollector.Helpers;
 using VideoGameCollector.Models;
@@ -18,6 +19,7 @@ namespace VideoGameCollector.ViewModels
         private Game selectedGame;
         private int gamesCount;
         private Game game;
+        private List<Game> gameDlc;
 
         public RelayCommand ShowGameDetailsViewCommand { private set; get; }
         public string Query
@@ -36,6 +38,16 @@ namespace VideoGameCollector.ViewModels
             {
                 game = value;
                 OnPropertyChanged("Game");
+            }
+        }
+
+        public List<Game> GameDlc
+        {
+            get { return gameDlc; }
+            set
+            {
+                gameDlc = value;
+                OnPropertyChanged("GameDlc");
             }
         }
 
@@ -92,8 +104,11 @@ namespace VideoGameCollector.ViewModels
         private async void GetGameDetails()
         {
             Game = await IGDBHelper.GetGameInformation(SelectedGame.id);
+            // Storing the queried ids from the Game object and storing them in a list
+            // within the game model in a whole new list.
+            Game.ConvertedDlcs = await IGDBHelper.GetGameDlcs(Game.dlcs);
+            Game.ConvertedBundles = await IGDBHelper.GetGameBundles(Game.bundles);
             Messenger.Default.Send(Game);
-            // Clear the listbox by clearing it in the search command button
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

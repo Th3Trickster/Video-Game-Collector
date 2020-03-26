@@ -8,6 +8,7 @@ namespace VideoGameCollector.Models
     {
         public int id { get; set; }
         public int date { get; set; }
+        public int region { get; set; }
         public Platform platform { get; set; }
     }
 }

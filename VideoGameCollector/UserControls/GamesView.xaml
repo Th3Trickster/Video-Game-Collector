@@ -9,7 +9,7 @@
              Background="White"
              d:DesignHeight="720" d:DesignWidth="980">
     <UserControl.Resources>
-        <ResourceDictionary Source="/ResoureDictionaries/ListBoxWithImageStyle.xaml"/>
+        <!--<ResourceDictionary Source="/ResoureDictionaries/ListBoxWithImageStyle.xaml"/>-->
     </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -96,7 +96,7 @@
                  Margin="0 30 0 0"
                  Style="{DynamicResource listBoxStyleWithImage}"
                  ItemContainerStyle="{StaticResource ListBoxItemItemStyle}"/>
-        
+
         <!-- StackPanel for Add and Remove Buttons -->
         <StackPanel Orientation="Horizontal"
                     Grid.Row="4"
@@ -110,7 +110,7 @@
             <Button Content="Remove"
                     Width="100"/>
         </StackPanel>
-        
+
         <!-- Grid for Browse Games, and other future buttons -->
         <Grid Grid.Row="5"
               HorizontalAlignment="Center"

@@ -9,7 +9,6 @@ namespace VideoGameCollector.Models
         public int id { get; set; }
         public bool campaigncoop { get; set; }
         public bool dropin { get; set; }
-        public int game { get; set; }
         public bool lancoop { get; set; }
         public bool offlinecoop { get; set; }
         public int offlinecoopmax { get; set; }
@@ -19,5 +18,6 @@ namespace VideoGameCollector.Models
         public int onlinemax { get; set; }
         public Platform platform { get; set; }
         public bool splitscreen { get; set; }
+        public bool splitscreenonline { get; set; }
     }
 }

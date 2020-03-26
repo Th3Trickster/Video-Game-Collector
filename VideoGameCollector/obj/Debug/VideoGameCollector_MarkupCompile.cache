@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\dhowa\Desktop\VideoGameCollector\VideoGameCollector\App.xaml
-10168203165
+12584869817
 
-12-1280730518
-128-1312615054
-BrowseGamesView.xaml;GameDetailsView.xaml;MainWindow.xaml;ResourceDictionaries\ListBoxDeveloperGenresStyle.xaml;ResourceDictionaries\ListBoxItemCardStyle.xaml;ResourceDictionaries\ListBoxWithImageStyle.xaml;UserControls\Card.xaml;UserControls\DashboardView.xaml;UserControls\GamesView.xaml;UserControls\ListBoxWithImage.xaml;
+15-1377662882
+129-797619744
+BrowseGamesView.xaml;DlcPopupWindowView.xaml;GameDetailsView.xaml;MainWindow.xaml;ResourceDictionaries\ListBoxDeveloperGenresStyle.xaml;ResourceDictionaries\ListBoxItemCardStyle.xaml;ResourceDictionaries\ListBoxScreenshotStyle.xaml;ResourceDictionaries\ListBoxWithImageStyle.xaml;ScreenshotPopupWindowView.xaml;UserControls\Card.xaml;UserControls\DashboardView.xaml;UserControls\GamesView.xaml;
 
 False
 

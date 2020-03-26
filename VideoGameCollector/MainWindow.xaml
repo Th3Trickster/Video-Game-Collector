@@ -16,7 +16,7 @@
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
 
-        <Frame Source="UserControls/GamesView.xaml"
+        <Frame Source="UserControls/DashboardView.xaml"
                Grid.Column="1"
                Width="980"
                HorizontalAlignment="Center"/>
